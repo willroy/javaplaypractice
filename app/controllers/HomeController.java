@@ -17,5 +17,7 @@ public class HomeController extends Controller {
     public Result index() {
         return ok(views.html.index.render());
     }
-
+    public Result inp_out(String text) {
+        return ok(text);
+    }
 }

@@ -36,3 +36,7 @@ function buttonpress() {
     toggle = 0;
   }
 }
+function input() {
+  var text = document.getElementById('textbox').value;
+  window.location.href = "/inp_out/" + text;
+}
