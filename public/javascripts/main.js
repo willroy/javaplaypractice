@@ -1,3 +1,5 @@
+var toggle = 0;
+
 function startTime() {
   var sheet = document.createElement('style');
   var today = new Date();
@@ -22,4 +24,15 @@ function startTime() {
 function checkTime(i) {
   if (i < 10) {i = "0" + i}; 
   return i;
+}
+function buttonpress() {
+  if (toggle == 0) {
+    document.getElementById('heading').innerHTML =
+      "Thanks!";
+    toggle = 1;
+  } else {
+    document.getElementById('heading').innerHTML = 
+      "Welcome! Please press the button below.";
+    toggle = 0;
+  }
 }
