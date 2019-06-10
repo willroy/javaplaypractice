@@ -24,6 +24,6 @@ public class HomeController extends Controller {
         return ok(views.html.two.render());
     }
     public Result inp_out(String text) {
-        return ok(text);
-    }
+        return ok(views.html.inpout.render(text));
+    }  
 }
