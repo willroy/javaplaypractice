@@ -21,10 +21,12 @@ function startTime() {
     var t = setTimeout(startTime, 500);                
   }
 }
+
 function checkTime(i) {
   if (i < 10) {i = "0" + i}; 
   return i;
 }
+
 function buttonpress() {
   if (toggle == 0) {
     document.getElementById('heading').innerHTML =
@@ -36,7 +38,57 @@ function buttonpress() {
     toggle = 0;
   }
 }
+
 function input() {
   var text = document.getElementById('textbox').value;
   window.location.href = "/inp_out/" + text;
+}
+
+function left() {
+  page = window.location.pathname;
+  if (page == "/one") {
+    page = 0;
+  }
+  if (page == "/") {
+    page = 1
+  }
+  if (page == "/two") {
+    page = 2;
+  }
+
+  if (page == 1) {
+    window.location.href = "/one";
+    document.getElementById("left").disabled = true;
+    page = 0
+  } else {
+    if (page == 2) {
+      window.location.href = "/";
+      document.getElementById("right").disabled = false;
+      page = 1
+    }
+  }
+}
+
+function right() {
+  page = window.location.pathname;
+  if (page == "/one") {
+    page = 0;
+  }
+  if (page == "/") {
+    page = 1
+  }
+  if (page == "/two") {
+    page = 2;
+  }
+
+  if (page == 0) {
+    window.location.href = "/";
+    page = 1
+  } else { 
+    if (page == 1) {
+      window.location.href = "/two";
+      document.getElementById("right").disabled = true;
+      page = 2
+    }
+  }
 }
