@@ -1,4 +1,4 @@
-@()
+@(notes:List[String])
 
 @main("Play Practice") {
   <h1 id="heading">Welcome! Please press the button below.</h1>
@@ -7,7 +7,14 @@
   </div>
   <input type="text" id="textbox" style="position: relative; top: 25px"></input>
   <button onclick="input()" style="position: relative; top: 25px">Click Here to input</button>
-  <div id="txt" style="position: relative; top: 50px"></div>
-  <button onclick="left()" id="left" style="position: relative; top: 75px; font-size: 15px">&#8617</button>
-  <button onclick="right()" id="right" style="position: relative; top: 75px; left: 203px; font-size: 15px">&#8618</button>
+  <button onclick="reset()" style="position: relative; top: 25px">Clear Notes</button>
+  <h1 style="position: relative; top: 20px"></h1>
+  <ul style="position: relative; top: 20px">
+    @for(s <- notes){
+      <li>@s</li>
+     }
+  </ul>
+  <div id="txt" style="position: relative; top: 20px"></div>
+  <button onclick="left()" id="left" style="position: relative; top: 40px; font-size: 15px">&#8617</button>
+  <button onclick="right()" id="right" style="position: relative; top: 40px; left: 203px; font-size: 15px">&#8618</button>
 }

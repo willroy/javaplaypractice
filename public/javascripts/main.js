@@ -41,7 +41,17 @@ function buttonpress() {
 
 function input() {
   var text = document.getElementById('textbox').value;
+  console.log(text);
+  if (text.match(/\S/)) {
+  } else {
+    text = "NO TEXT SPECIFIED";  
+  }
+  console.log(text);
   window.location.href = "/inp_out/" + text;
+}
+
+function reset() {
+  window.location.href = "/reset";
 }
 
 function left() {
