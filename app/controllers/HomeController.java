@@ -29,7 +29,6 @@ public class HomeController extends Controller {
       .get()
       .thenApply(r -> {
         JsonNode wasd = r.asJson();
-        System.out.println("READ HERE::::" + wasd);
         ObjectMapper mapper = new ObjectMapper();
         List<String> notes = null;
         try {
@@ -55,7 +54,7 @@ public class HomeController extends Controller {
   }  
   
   public Result reset() {
-    ws.url("http://localhost:9001/reset");
+    ws.url("http://localhost:9001/reset").get();
     return redirect("/");
   }  
 }
