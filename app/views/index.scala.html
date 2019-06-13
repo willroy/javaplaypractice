@@ -1,20 +1,31 @@
 @(notes:List[String])
 
 @main("Play Practice") {
-  <h1 id="heading">Welcome! Please press the button below.</h1>
+  <button onclick="left()" id="left" style="position: relative; top: 28px; font-size: 15px">&#8617</button>
+  <button onclick="right()" id="right" style="position: relative; top: 68px;
+    left: -32px; font-size: 15px">&#8618</button>
+
   <div>
-  <button onclick="buttonpress()">Click Here</button>
+    <h2 id="heading">To-Do List</h2>
+    <div id="txt" style="position: relative; top: -83px; left: 990px"></div>
   </div>
-  <input type="text" id="textbox" style="position: relative; top: 25px"></input>
-  <button onclick="input()" style="position: relative; top: 25px">Click Here to input</button>
-  <button onclick="reset()" style="position: relative; top: 25px">Clear Notes</button>
-  <h1 style="position: relative; top: 20px"></h1>
-  <ul style="position: relative; top: 20px">
-    @for(s <- notes){
-      <li>@s</li>
-     }
-  </ul>
-  <div id="txt" style="position: relative; top: 20px"></div>
-  <button onclick="left()" id="left" style="position: relative; top: 40px; font-size: 15px">&#8617</button>
-  <button onclick="right()" id="right" style="position: relative; top: 40px; left: 203px; font-size: 15px">&#8618</button>
+
+
+  <input type="text" id="textbox" style="position: relative; left:3%; top: -15px"></input>
+  <button onclick="input()" class="fade" style="position: relative; left:
+    60px; top: -16px">Click Here to input</button>
+  <button onclick="reset()" class="fade" style="position: relative; left:
+    60px; top: -16px">Clear Notes</button>
+
+  <div id="tableheader">
+    <h5>Items</h5>
+  </div>
+
+  <div id="table">
+    <ul>
+      @for(s <- notes){
+      <li style="list-style-type: none;">@s</li>
+      }
+    </ul>
+  </div>
 }

@@ -36,6 +36,7 @@ public class HomeController extends Controller {
         } catch(Exception ex){
           notes = new ArrayList<String>();
         }
+        notes.remove(0);
         return ok(views.html.index.render(notes));
       });
   }

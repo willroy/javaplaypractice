@@ -2,3 +2,66 @@ body {
   position: relative;
   left: 20px;
 }
+
+h2 {
+  font-family: 'Roboto'; 
+  font-size: 30px; 
+  background-color: lightblue;
+  border-style: solid;
+  border-color: lightblue;
+  border-width: 10px;
+  border-left-width: 30px;
+  border-radius: 10px;
+  width: 1000px;
+  position: relative;
+  left: 3%;
+  top: -20px;
+}
+
+#textbox {
+  font-size: 20px;
+  border-style: solid;
+  border-color: #b4bcc6;
+  border-width: 1px;
+  x-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+}
+
+.fade {
+  height: 26px;
+  font-size: 14px;
+  color: #8f9091;
+  border-style: solid;
+  border-color: #abacad;
+}
+
+#table {
+  position: relative; 
+  top: -60px;
+  left: 3%;
+  border-style: solid;
+  border-color: #8abfd1;
+  border-radius: 10px;
+  width: 300px;
+  min-height: 50px;
+}
+
+h5 {
+  position: relative; 
+  top: -10px;
+  left: 250px;
+  background-color: white;
+  width: 50px;
+  z-index: 10;
+  border-style: solid;
+  border-color: #FFFFFF;
+  border-left-width: 10px;
+  font-family: 'Roboto'; 
+  font-size: 18px;
+}
+
+li {
+  font-size: 18px;
+  font-family: 'Roboto'; 
+}

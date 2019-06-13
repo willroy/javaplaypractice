@@ -30,11 +30,11 @@ function checkTime(i) {
 function buttonpress() {
   if (toggle == 0) {
     document.getElementById('heading').innerHTML =
-      "Thanks!";
+      "This is the left page!";
     toggle = 1;
   } else {
     document.getElementById('heading').innerHTML = 
-      "Welcome! Please press the button below.";
+      "This page is to the left!";
     toggle = 0;
   }
 }
@@ -44,7 +44,7 @@ function input() {
   console.log(text);
   if (text.match(/\S/)) {
   } else {
-    text = "NO TEXT SPECIFIED";  
+    return false;
   }
   console.log(text);
   window.location.href = "/inp_out/" + text;
