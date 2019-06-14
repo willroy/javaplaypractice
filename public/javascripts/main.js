@@ -46,8 +46,14 @@ function input() {
   } else {
     return false;
   }
-  console.log(text);
-  window.location.href = "/inp_out/" + text;
+  if (text.includes("/") == true) {
+    document.getElementById("error").innerHTML = "Must not contain: /";
+    setTimeout(function(){ document.getElementById("error").innerHTML = ""; }, "4000");
+    console.log("error wait done");
+  } else {
+    console.log(text);
+    window.location.href = "/inp_out/" + text;
+  }
 }
 
 function reset() {

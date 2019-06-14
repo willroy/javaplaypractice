@@ -1,9 +1,10 @@
 @(notes:List[String])
 
 @main("Play Practice") {
-  <button onclick="left()" id="left" style="position: relative; top: 28px; font-size: 15px">&#8617</button>
+  <button onclick="left()" id="left" style="position: relative; top: 28px;
+    font-size: 15px; outline: none !important;">&#8617</button>
   <button onclick="right()" id="right" style="position: relative; top: 68px;
-    left: -32px; font-size: 15px">&#8618</button>
+  left: -32px; font-size: 15px; outline: none !important;">&#8618</button>
 
   <div>
     <h2 id="heading">To-Do List</h2>
@@ -13,9 +14,10 @@
 
   <input type="text" id="textbox" style="position: relative; left:3%; top: -15px"></input>
   <button onclick="input()" class="fade" style="position: relative; left:
-    60px; top: -16px">Click Here to input</button>
+    60px; top: -16px; outline: none !important;">Click Here to input</button>
   <button onclick="reset()" class="fade" style="position: relative; left:
-    60px; top: -16px">Clear Notes</button>
+    60px; top: -16px; outline: none !important;">Clear Notes</button>
+  <a id="error"></a>
 
   <div id="tableheader">
     <h5>Items</h5>
@@ -24,7 +26,13 @@
   <div id="table">
     <ul>
       @for(s <- notes){
-      <li style="list-style-type: none;">@s</li>
+      <li style="list-style-type: none;">
+          @s
+          <label class="container">
+            <input type="checkbox">
+              <span class="checkmark"></span>
+          </label>
+      </li>
       }
     </ul>
   </div>
