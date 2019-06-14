@@ -46,18 +46,17 @@ function input() {
   } else {
     return false;
   }
-  if (text.includes("/") == true) {
-    document.getElementById("error").innerHTML = "Must not contain: /";
-    setTimeout(function(){ document.getElementById("error").innerHTML = ""; }, "4000");
-    console.log("error wait done");
-  } else {
     console.log(text);
-    window.location.href = "/inp_out/" + text;
-  }
+    urltail = encodeURIComponent(text)
+    window.location.href = "/inp_out/" + urltail;
 }
 
 function reset() {
   window.location.href = "/reset";
+}
+
+function tick(text) {
+  console.log(text);
 }
 
 function left() {
