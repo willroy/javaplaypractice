@@ -30,13 +30,16 @@ public class HomeController extends Controller {
       .thenApply(r -> {
         JsonNode wasd = r.asJson();
         ObjectMapper mapper = new ObjectMapper();
-        List<String> notes = null;
+        ArrayList<String> notes = null;
+
         try {
           notes = mapper.readValue(wasd.toString(), new TypeReference<List<String>>(){});
         } catch(Exception ex){
-          notes = new ArrayList<String>();
         }
-        notes.remove(0);
+
+        notes.removeAll(Collections.singletonList("true"));
+        notes.removeAll(Collections.singletonList("false"));
+
         return ok(views.html.index.render(notes));
       });
   }

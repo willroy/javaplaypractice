@@ -46,9 +46,9 @@ function input() {
   } else {
     return false;
   }
-    console.log(text);
-    urltail = encodeURIComponent(text)
-    window.location.href = "/inp_out/" + urltail;
+  console.log(text);
+  urltail = encodeURIComponent(text);
+  window.location.href = "/inp_out/" + urltail;
 }
 
 function reset() {
