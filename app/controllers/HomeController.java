@@ -39,6 +39,7 @@ public class HomeController extends Controller {
 
         notes.removeAll(Collections.singletonList("true"));
         notes.removeAll(Collections.singletonList("false"));
+        notes.remove(0);
 
         return ok(views.html.index.render(notes));
       });
